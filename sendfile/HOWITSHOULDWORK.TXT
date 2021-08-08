@@ -1,0 +1,14 @@
+HOW THE PROGRAM SHOULD WORK:
+
+./server connects
+./client connects
+
+on client connect, a loop needs to exist that only exits on CTRL+C instructional (sigint)
+
+when we enter this function, the client should print FTP> then allow us to input (get/ls/file) commands
+
+this will be our first link (client -> server) and this is where all error handling is dealt with
+
+when a command is run, we then enter that function and create a new ephemeral port connection - this is our data link
+
+all data is sent through this link but all information is sent to the main link
